@@ -19,4 +19,5 @@ sudo podman build -t $NAME .
 sudo podman images
 sudo podman run -d -i -p 1234:1234 --name $NAME localhost/puppet-env
 sudo podman ps
-telnet localhost 1234
+sudo podman exec -ti $NAME /bin/bash
+# telnet localhost 1234
